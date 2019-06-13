@@ -51,7 +51,7 @@
 
 	<h3>Keycloak 操作</h3>
 	<div class="container-fluid">
-		<a href="javascript: keycloak.accountManagement();"  class="btn btn-primary btn-default active" role="button">マイリソース</a>
+		<a href="javascript: location.href=keycloak.createAccountUrl().replace('account','account/resource');"  class="btn btn-primary btn-default active" role="button">マイリソース</a>
 		<a href="javascript: keycloak.logout();" class="btn btn-default active" role="button">ログアウト</a>
 	</div>
 

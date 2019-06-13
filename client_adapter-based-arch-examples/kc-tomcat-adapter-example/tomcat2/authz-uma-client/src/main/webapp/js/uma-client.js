@@ -106,9 +106,11 @@ function submit(id, method, token, submitRequest) {
 					var authorizationRequest = {};
 					authorizationRequest.ticket = ticket;
 
-					// パーミッション申請の場合は、submitRequest フラグを設定
+					// パーミッション申請の有無を設定
 					if (submitRequest) {
 						authorizationRequest.submitRequest = submitRequest;
+					} else {
+						authorizationRequest.submitRequest = false;
 					}
 
 					// 認可サーバーへ認可リクエスト送信
